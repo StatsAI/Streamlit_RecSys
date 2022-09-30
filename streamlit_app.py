@@ -17,7 +17,7 @@ image = Image.open('images/rec_sys.PNG')
 
 st.image(image)
 
-st.sidebar.write('Use the below controls to select the number of recommendations you would like to generate for a given user')
+st.sidebar.write('Intsructions: Use the below controls to select the number of recommendations you would like to generate for a given user')
 
 user_id = st.sidebar.selectbox(label = 'Select the user ID', options = ('1', '2', '3', '4', '5')) 
 
