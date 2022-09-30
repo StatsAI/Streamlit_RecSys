@@ -70,9 +70,9 @@ def ranking_predict(num_recs, user_id):
 	
 	if user_id == "1":
 		
-		results = {'Delicatessen (1991)':3.6232116, 'Supercop (1992)':3.6091228, 
-			   'Tie Me Up! Tie Me Down! (1990)':3.6056335, 
-			   'City of Lost Children, The (1995)':3.5767572, 'Amateur (1994)':3.5685296}
+		results = {'Delicatessen (1991)':[[3.6232116]], 'Supercop (1992)':[[3.6091228]], 
+			   'Tie Me Up! Tie Me Down! (1990)':[[3.6056335]], 
+			   'City of Lost Children, The (1995)':[[3.5767572]], 'Amateur (1994)':[[3.5685296]]}
 
 	if user_id == "2":
 		
@@ -81,7 +81,8 @@ def ranking_predict(num_recs, user_id):
 	
 	if user_id == "3":
 		
-		results = ['Deep Rising (1998)', 'Sphere (1998)','Fallen (1998)','Hard Rain (1998)','Jackie Brown (1997)']
+		results = {'Fallen (1998)': [[3.5747707]], 'Hard Rain (1998)': [[3.5215206]],  'Jackie Brown (1997)': [[3.4988317]], 
+			   'Sphere (1998)': [[3.4699707]], 'Deep Rising (1998)': [[3.44528]]}
 		
 	return results.items()
 
