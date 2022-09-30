@@ -11,7 +11,7 @@ image = Image.open('images/rec_sys.PNG')
 
 st.image(image)
 
-st.write("Source:[link](https://www.tensorflow.org/recommenders/examples/basic_retrieval)")
+st.write("Source: [Tensorflow Recommenders](https://www.tensorflow.org/recommenders/examples/basic_retrieval)")
 
 
 st.title('Tensorflow Recommenders: Movie Recommendation System')
