@@ -1,6 +1,15 @@
 import streamlit as st
 import numpy as np 
 import tensorflow as tf
+from PIL import Image
+
+#opening the image
+
+image = Image.open('images/rec_sys')
+
+#displaying the image on streamlit app
+
+st.image(image, caption='Enter any caption here')
 
 st.title('Tensorflow Recommenders: Movie Recommendation System')
 
