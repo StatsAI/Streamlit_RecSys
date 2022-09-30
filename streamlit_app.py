@@ -76,7 +76,8 @@ def ranking_predict(num_recs, user_id):
 
 	if user_id == "2":
 		
-		results = ['Secrets & Lies (1996)', 'Kolya (1996)', "Ulee's Gold (1997)", "Ulee's Gold (1997)", 'Michael Collins (1996)']
+		results = {'Michael Collins (1996)': [[3.6752324]], "Ulee's Gold (1997)": [[3.648582]], "Ulee's Gold (1997)": [[3.648582]],
+			   'Secrets & Lies (1996)': [[3.648371]], 'Kolya (1996)': [[3.6237879]]}
 	
 	if user_id == "3":
 		
