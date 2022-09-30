@@ -17,11 +17,11 @@ image = Image.open('images/rec_sys.PNG')
 
 st.image(image)
 
-st.write('Instructions: The inputs on the sidebar allow you to select the user and the number of recommendations you would like to generate for the user')
+st.sidebar.write('Instructions: The inputs on the sidebar allow you to select the user and the number of recommendations you would like to generate for the user')
 
-st.write('Click on the generate candidates button to generate a list of candidates using the retreval model.')
+st.sidebar.write('Click on the generate candidates button to generate a list of candidates using the retreval model.')
 
-st.write('Click on the rank candidates button to rank the candidates using the ranking model.')
+st.sidebar.write('Click on the rank candidates button to rank the candidates using the ranking model.')
 
 st.sidebar.write('zys')
          
