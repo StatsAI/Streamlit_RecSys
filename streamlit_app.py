@@ -37,9 +37,11 @@ def retrieval_predict(num_recs, user_id):
 	# Load Retrieval Model
 	loaded_retrieval_model = tf.saved_model.load('models/basic_ranking_model.pb')
 	
-	scores, titles = loaded_retrieval_model([user_id])
+	#scores, titles = loaded_retrieval_model([user_id])
 	
-	return titles[0][:num_recs]
+	#return titles[0][:num_recs]
+
+	return loaded_retrieval_model
 
 
 st.sidebar.write('Instructions: Click on the generate candidates button to generate a list of candidates using the retrieval model.')
@@ -51,6 +53,8 @@ if st.sidebar.button('Generate Candidates'):
     prediction = retrieval_predict(num_recs, user_id)
     
     st.write('Your candidate recommendations are: ' + str(prediction))
+	
+	
 	
 
 ####################################################################################################################################################	
