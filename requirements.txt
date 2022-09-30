@@ -5,4 +5,3 @@ tensorflow-recommenders
 Pillow
 pandas
 scikit_learn
-os
