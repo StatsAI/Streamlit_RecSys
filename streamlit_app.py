@@ -23,8 +23,8 @@ st.write('Click on the generate candidates button to generate a list of candidat
 
 st.write('Click on the rank candidates button to rank the candidates using the ranking model.')
 
-
-st.sidebar.write('xyz'
+With st.sidebar:
+         st.write('xyz')
          
 user_id = st.sidebar.selectbox(label = 'Select the user ID', options = ('1', '2', '3', '4', '5')) 
 
