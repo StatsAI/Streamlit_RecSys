@@ -37,7 +37,7 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1.
 ####################################################################################################################################################
 def retrieval_predict(num_recs, user_id):
 	
-	num_recs = to_int(num_recs)
+	#num_recs = to_int(num_recs)
     
 	if user_id == "1":
 		
@@ -45,7 +45,7 @@ def retrieval_predict(num_recs, user_id):
 		
 	#return results[:2]
 
-	return type(num_recs)
+	return num_recs
 	
 	# Load Retrieval Model
 	#loaded_retrieval_model = tf.saved_model.load('models/basic_ranking_model.pb')
