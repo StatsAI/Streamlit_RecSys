@@ -26,7 +26,7 @@ st.image(image)
 
 st.sidebar.write('Instructions: Use the below controls to select the number of movie recommendations you would like to generate for a given user.')
 
-user_id = st.sidebar.selectbox(label = 'Select the user ID', options = ('1', '2', '3', '4', '5')) 
+user_id = st.sidebar.selectbox(label = 'Select the user ID', options = ('1', '2', '3')) 
 
 num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1,
                           max_value = 5 ,
