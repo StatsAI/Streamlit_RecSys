@@ -87,6 +87,8 @@ def ranking_predict(num_recs, user_id):
 		
 	return results.items()[:num_recs]
 
+####################################################################################################################################################
+
 st.sidebar.write('Instructions: Click on the generate candidates button to generate a list of candidates using the retrieval model.')
 
 #st.sidebar.button('Generate Candidates', key = "1")
