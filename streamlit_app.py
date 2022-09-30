@@ -35,8 +35,14 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1.
 
 
 ####################################################################################################################################################
-#def retrieval_predict(num_recs, user_id):
+def retrieval_predict(num_recs, user_id):
     
+	if user_id == "1":
+		
+		results = ['Delicatessen (1991)', 'Tie Me Up! Tie Me Down! (1990)', 'Amateur (1994)', 'Supercop (1992)', 'City of Lost Children, The (1995)']
+		
+	return results[:num_recs]
+	
 	# Load Retrieval Model
 	#loaded_retrieval_model = tf.saved_model.load('models/basic_ranking_model.pb')
 	
@@ -57,7 +63,7 @@ if st.sidebar.button('Generate Candidates'):
     
     prediction = retrieval_predict(num_recs, user_id)
     
-    #st.write('Your candidate recommendations are: ' + str(prediction))
+    st.write('Your candidate recommendations are: ' + str(prediction))
 	
 	
 
