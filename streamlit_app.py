@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np 
 import tensorflow as tf
+from tensorflow.keras.models import load_model
 from PIL import Image
 
 ####################################################################################################################################################
@@ -36,7 +37,9 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1.
 def retrieval_predict(num_recs, user_id):
     
 	# Load Retrieval Model
-	loaded_retrieval_model = tf.saved_model.load('models/basic_ranking_model.pb')
+	#loaded_retrieval_model = tf.saved_model.load('models/basic_ranking_model.pb')
+	
+	loaded_retrieval_model = load_model('models/basic_ranking_model.pb')
 	
 	#scores, titles = loaded_retrieval_model([user_id])
 	
