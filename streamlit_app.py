@@ -43,7 +43,9 @@ def retrieval_predict(num_recs, user_id):
 		
 		results = ['Delicatessen (1991)', 'Tie Me Up! Tie Me Down! (1990)', 'Amateur (1994)', 'Supercop (1992)', 'City of Lost Children, The (1995)']
 		
-	return results[:2]
+	#return results[:2]
+
+	return type(num_recs)
 	
 	# Load Retrieval Model
 	#loaded_retrieval_model = tf.saved_model.load('models/basic_ranking_model.pb')
