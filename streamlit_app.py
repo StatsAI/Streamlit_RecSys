@@ -2,12 +2,6 @@ import streamlit as st
 import numpy as np 
 import tensorflow as tf
 
-# create 5 pages in streamlit app 
-    # page 1: introduction
-
-# add market research tab 
-
-
 st.title('Tensorflow Recommenders: Movie Recommendation System')
 
 st.write('This is a web app to recommend movies using the Tensorflow Recommenders Python library. It uses the following approach:')
