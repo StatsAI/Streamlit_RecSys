@@ -9,8 +9,8 @@ from PIL import Image
 #loaded_retrieval_model = tf.keras.models.load_model('models/basic_retrieval_model.pb')
 
 #these work
-#model1 = tf.keras.models.load_model('models/my_keras_model1.h5')
-model1 = tf.saved_model.load('models/my_keras_model1.h5')
+model1 = tf.keras.models.load_model('models/my_keras_model1.h5')
+#model1 = tf.saved_model.load('models/my_keras_model1.h5')
 
 
 ####################################################################################################################################################
