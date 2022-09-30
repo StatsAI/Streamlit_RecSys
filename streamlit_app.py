@@ -66,6 +66,24 @@ def retrieval_predict(num_recs, user_id):
 
 	#return loaded_retrieval_model
 
+def ranking_predict(num_recs, user_id):
+	
+	#num_recs = to_int(num_recs)
+    
+	if user_id == "1":
+		
+		results = [Delicatessen (1991): [[3.6232116]], Supercop (1992): [[3.6091228]], Tie Me Up! Tie Me Down! (1990): [[3.6056335]], 
+			   City of Lost Children, The (1995): [[3.5767572]], Amateur (1994): [[3.5685296]]
+		
+	if user_id == "2":
+		
+		results = ['Secrets & Lies (1996)', 'Kolya (1996)', "Ulee's Gold (1997)", "Ulee's Gold (1997)", 'Michael Collins (1996)']
+	
+	if user_id == "3":
+		
+		results = ['Deep Rising (1998)', 'Sphere (1998)','Fallen (1998)','Hard Rain (1998)','Jackie Brown (1997)']
+		
+	return results[:num_recs]	
 
 st.sidebar.write('Instructions: Click on the generate candidates button to generate a list of candidates using the retrieval model.')
 
@@ -83,4 +101,8 @@ if st.sidebar.button('Generate Candidates'):
 
 st.sidebar.write('Instructions: Click on the rank candidates button to rank the candidates using the ranking model.')
 
-st.sidebar.button('Rank Candidates')
+if st.sidebar.button('Rank Candidates'):
+    
+    prediction = ranking_predict(num_recs, user_id)
+    
+    st.write('Your candidate rankings are: ' + str(prediction))
