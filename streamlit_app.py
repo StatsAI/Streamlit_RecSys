@@ -5,11 +5,11 @@ from PIL import Image
 
 #opening the image
 
-image = Image.open('images/rec_sys')
+image = Image.open('images/rec_sys.PNG')
 
 #displaying the image on streamlit app
 
-st.image(image, caption= 'Enter any caption here')
+st.image(image, caption = 'Enter any caption here')
 
 st.title('Tensorflow Recommenders: Movie Recommendation System')
 
