@@ -72,9 +72,10 @@ def ranking_predict(num_recs, user_id):
     
 	if user_id == "1":
 		
-		results = ['Delicatessen (1991) 3.6232116, 'Supercop (1992)' 3.6091228]
+		results = {'Delicatessen (1991)':3.6232116, 'Supercop (1992)':3.6091228, 
+			   'Tie Me Up! Tie Me Down! (1990)':3.6056335, 
+			   'City of Lost Children, The (1995)':3.5767572, 'Amateur (1994)':3.5685296}
 
-		
 	if user_id == "2":
 		
 		results = ['Secrets & Lies (1996)', 'Kolya (1996)', "Ulee's Gold (1997)", "Ulee's Gold (1997)", 'Michael Collins (1996)']
