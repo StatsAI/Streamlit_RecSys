@@ -42,7 +42,7 @@ def retrieval_predict(num_recs, user_id):
 	
 	#return titles[0][:num_recs]
 
-	return loaded_retrieval_model
+	#return loaded_retrieval_model
 
 
 st.sidebar.write('Instructions: Click on the generate candidates button to generate a list of candidates using the retrieval model.')
@@ -53,8 +53,7 @@ if st.sidebar.button('Generate Candidates'):
     
     prediction = retrieval_predict(num_recs, user_id)
     
-    st.write('Your candidate recommendations are: ' + str(prediction))
-	
+    #st.write('Your candidate recommendations are: ' + str(prediction))
 	
 	
 
