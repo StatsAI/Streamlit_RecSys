@@ -31,6 +31,7 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1.
                           value = 3.0,
                           step = 1.0)
 
+
 ####################################################################################################################################################
 def retrieval_predict(num_recs, user_id):
     
