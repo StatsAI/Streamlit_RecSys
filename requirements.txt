@@ -1,7 +1,6 @@
 numpy
 streamlit
 tensorflow
-tensorflow-recommenders
 Pillow
 pandas
 scikit_learn
