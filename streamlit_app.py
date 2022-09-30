@@ -85,7 +85,7 @@ def ranking_predict(num_recs, user_id):
 		results = {'Fallen (1998)': [[3.5747707]], 'Hard Rain (1998)': [[3.5215206]],  'Jackie Brown (1997)': [[3.4988317]], 
 			   'Sphere (1998)': [[3.4699707]], 'Deep Rising (1998)': [[3.44528]]}
 		
-	return results.items()[:num_recs]
+	return list(results.items())[:num_recs]
 
 ####################################################################################################################################################
 
