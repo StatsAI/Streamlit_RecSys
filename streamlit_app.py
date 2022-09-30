@@ -6,12 +6,17 @@ import tensorflow as tf
     # page 1: introduction
 
 # add market research tab 
-app_mode = st.sidebar.selectbox('Select Page', ['Introduction', 'Patient Dashboard', 'Modeling Accuracy Dashboard', 'Real-time Prediction', 'Hardware Build'])
 
-if app_mode == 'Introduction':
-    st.title("Project Background")
-    st.markdown("Dataset :")
 
-if app_mode == 'Patient Dashboard':
-    st.title("Patient Dashboard")
-	st.markdown("Dataset :")
+st.title('Wine Quality Classifier Web App')
+
+st.write('This is a web app to classify the quality of your wine based on\
+         several features that you can see in the sidebar. Please adjust the\
+         value of each feature. After that, click on the Predict button at the bottom to\
+         see the prediction of the classifier.')
+
+
+fixed_acidity = st.sidebar.slider(label = 'Fixed Acidity', min_value = 4.0,
+                          max_value = 16.0 ,
+                          value = 10.0,
+                          step = 0.1)
