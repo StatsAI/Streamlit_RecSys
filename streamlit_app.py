@@ -82,7 +82,7 @@ def ranking_predict(num_recs, user_id):
 		
 		results = ['Deep Rising (1998)', 'Sphere (1998)','Fallen (1998)','Hard Rain (1998)','Jackie Brown (1997)']
 		
-	return results.items[:num_recs]	
+	return results.items()
 
 st.sidebar.write('Instructions: Click on the generate candidates button to generate a list of candidates using the retrieval model.')
 
