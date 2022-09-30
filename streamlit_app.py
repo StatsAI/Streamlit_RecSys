@@ -68,8 +68,6 @@ def retrieval_predict(num_recs, user_id):
 
 def ranking_predict(num_recs, user_id):
 	
-	#num_recs = to_int(num_recs)
-    
 	if user_id == "1":
 		
 		results = {'Delicatessen (1991)':3.6232116, 'Supercop (1992)':3.6091228, 
@@ -84,7 +82,7 @@ def ranking_predict(num_recs, user_id):
 		
 		results = ['Deep Rising (1998)', 'Sphere (1998)','Fallen (1998)','Hard Rain (1998)','Jackie Brown (1997)']
 		
-	return results[:num_recs]	
+	return results.items[:num_recs]	
 
 st.sidebar.write('Instructions: Click on the generate candidates button to generate a list of candidates using the retrieval model.')
 
