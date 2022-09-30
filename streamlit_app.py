@@ -12,12 +12,19 @@ def retrieval_predict(num_recs, user_id):
 	
 	return titles[0][:num_recs]
 
+
+
+####################################################################################################################################################
+
 st.title('Tensorflow Recommenders Library Movie Recommendation System')
 
 st.write('This is a web app to recommend movies to users based upon their watch history using the Tensorflow Recommenders Python library.')
 
 st.write('It uses the following two-model approach approach, as outlined by: [Tensorflow Recommenders](https://www.tensorflow.org/recommenders/examples/basic_retrieval)')         
-         
+
+
+####################################################################################################################################################
+
 #opening the image
 
 image = Image.open('images/rec_sys.PNG')
@@ -35,6 +42,8 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1.
                           value = 3.0,
                           step = 1.0)
 
+####################################################################################################################################################
+
 st.sidebar.write('Instructions: Click on the generate candidates button to generate a list of candidates using the retrieval model.')
 
 #st.sidebar.button('Generate Candidates', key = "1")
@@ -44,6 +53,9 @@ if st.sidebar.button('Generate Candidates'):
     prediction = retrieval_predict(num_recs, user_id)
     
     st.write('Your candidate recommendations are: ' + str(prediction))
+	
+
+####################################################################################################################################################	
 
 st.sidebar.write('Instructions: Click on the rank candidates button to rank the candidates using the ranking model.')
 
