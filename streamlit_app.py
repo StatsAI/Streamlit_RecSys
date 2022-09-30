@@ -3,6 +3,18 @@ import numpy as np
 import tensorflow as tf
 from PIL import Image
 
+def retrieval_predict(num_recs, user_id):
+    
+	# Load Retrieval Model
+	loaded_retrieval_model = tf.saved_model.load('models/basic_ranking_model.pb')
+	
+    scores, titles = loaded_retrieval_model([user_id])
+    
+    return titles[0][:num_recs]
+	
+	
+
+
 st.title('Tensorflow Recommenders Library Movie Recommendation System')
 
 st.write('This is a web app to recommend movies to users based upon their watch history using the Tensorflow Recommenders Python library.')
@@ -17,7 +29,7 @@ image = Image.open('images/rec_sys.PNG')
 
 st.image(image)
 
-st.sidebar.write('Instructions: Use the below controls to select the number of movie recommendations you would like to generate for a given user. 🚀')
+st.sidebar.write('Instructions: Use the below controls to select the number of movie recommendations you would like to generate for a given user.')
 
 user_id = st.sidebar.selectbox(label = 'Select the user ID', options = ('1', '2', '3', '4', '5')) 
 
@@ -26,10 +38,16 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1.
                           value = 3.0,
                           step = 1.0)
 
-st.sidebar.write('Instructions: Click on the generate candidates button to generate a list of candidates using the retrieval model. 🚀🚀')
+st.sidebar.write('Instructions: Click on the generate candidates button to generate a list of candidates using the retrieval model.')
 
 st.sidebar.button('Generate Candidates')
 
-st.sidebar.write('Instructions: Click on the rank candidates button to rank the candidates using the ranking model. 🚀🚀🚀')
+st.sidebar.write('Instructions: Click on the rank candidates button to rank the candidates using the ranking model.')
 
 st.sidebar.button('Rank Candidates')
+
+if st.button('Generate Candidates'):
+    
+    prediction = retrieval_predict(num_recs, user_id)
+    
+    st.write('Your candidate recommendations are: ' + str(prediction))
