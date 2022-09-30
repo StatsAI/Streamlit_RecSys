@@ -26,10 +26,10 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1.
                           value = 3.0,
                           step = 1.0)
 
-st.sidebar.write('Instructions: Click on the generate candidates button to generate a list of candidates using the retrieval model.')
+st.sidebar.write('Instructions: Click on the generate candidates button to generate a list of candidates using the retrieval model. 🚀🚀')
 
 st.sidebar.button('Generate Candidates')
 
-st.sidebar.write('Instructions: Click on the rank candidates button to rank the candidates using the ranking model.')
+st.sidebar.write('Instructions: Click on the rank candidates button to rank the candidates using the ranking model. 🚀🚀🚀')
 
 st.sidebar.button('Rank Candidates')
