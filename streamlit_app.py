@@ -14,7 +14,7 @@ st.write('This is a web app to recommend movies using the Tensorflow Recommender
 
 st.write('Instructions: The inputs on the sidebar allow you to select the user and the number of recommendations you would like to get. After that, click on the generate recommendations button at the bottom to get the results!')
 
-user_id = st.sidebar.selectbox(label = 'Select the user ID', options = ('Email', 'Home phone', 'Mobile phone'))
+user_id = st.sidebar.selectbox(label = 'Select the user ID', options = ('1', '2', '3', '4', '5') 
 
 num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1.0,
                           max_value = 5.0 ,
