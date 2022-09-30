@@ -5,7 +5,7 @@ from PIL import Image
 
 #opening the image
 
-image = Image.open('images/rec_sys.png')
+image = Image.open('images/rec_sys.PNG')
 
 #displaying the image on streamlit app
 
