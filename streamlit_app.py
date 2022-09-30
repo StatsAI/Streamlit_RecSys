@@ -6,10 +6,16 @@ from PIL import Image
 #loaded_retrieval_model = tf.saved_model.load('models/basic_retrieval_model.pb')
 #loaded_ranking_model = tf.saved_model.load('models/basic_ranking_model.pb')
 
-#loaded_retrieval_model = tf.keras.models.load_model('models/basic_retrieval_model.pb')
+# this does not work
+#loaded_retrieval_model = tf.saved_model.load('models/basic_retrieval_model.pb')
 
-#these work
-model1 = tf.keras.models.load_model('models/my_keras_model1.h5')
+# this does not work
+loaded_retrieval_model = tf.keras.models.load_model('models/basic_retrieval_model.pb')
+
+# this works
+#model1 = tf.keras.models.load_model('models/my_keras_model1.h5')
+
+# this does not work
 #model1 = tf.saved_model.load('models/my_keras_model1.h5')
 
 
