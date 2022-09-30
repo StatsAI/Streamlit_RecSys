@@ -9,7 +9,13 @@ image = Image.open('images/rec_sys.PNG')
 
 #displaying the image on streamlit app
 
-st.image(image, caption = 'Enter any caption here')
+#st.image(image, caption = 'Enter any caption here')
+
+st.image(image, caption = 'Source:[link](https://www.tensorflow.org/recommenders/examples/basic_retrieval)')
+
+
+#st.write("Source:[link](https://www.tensorflow.org/recommenders/examples/basic_retrieval)")
+
 
 st.title('Tensorflow Recommenders: Movie Recommendation System')
 
