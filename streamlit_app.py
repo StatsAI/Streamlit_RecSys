@@ -19,7 +19,7 @@ st.image(image)
 
 st.write("Image Source: [Tensorflow Recommenders](https://www.tensorflow.org/recommenders/examples/basic_retrieval)")
 
-st.write('Instructions: The inputs on the sidebar allow you to select the user and the number of recommendations you would like to get. After that, click on the generate recommendations button at the bottom to get the results!')
+st.write('Instructions: The inputs on the sidebar allow you to select the user and the number of recommendations you would like to generate for the user. Click on the generate recommendations button to get the results!')
 
 user_id = st.sidebar.selectbox(label = 'Select the user ID', options = ('1', '2', '3', '4', '5')) 
 
