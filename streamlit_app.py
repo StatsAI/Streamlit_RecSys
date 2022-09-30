@@ -8,12 +8,11 @@ import tensorflow as tf
 # add market research tab 
 
 
-st.title('Wine Quality Classifier Web App')
+st.title('Tensorflow Recommenders: Movie Recommendation System')
 
-st.write('This is a web app to classify the quality of your wine based on\
-         several features that you can see in the sidebar. Please adjust the\
-         value of each feature. After that, click on the Predict button at the bottom to\
-         see the prediction of the classifier.')
+st.write('This is a web app to recommend movies using the Tensorflow Recommenders Python library. It uses the following approach:')
+
+st.write('Instructions: The inputs on the sidebar allow you to select the user and the number of recommendations you would like to get. After that, click on the generate recommendations button at the bottom to get the results!')
 
 
 fixed_acidity = st.sidebar.slider(label = 'Fixed Acidity', min_value = 4.0,
