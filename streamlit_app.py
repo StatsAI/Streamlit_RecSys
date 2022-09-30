@@ -36,7 +36,7 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1.
 
 
 ####################################################################################################################################################
-def retrieval_predict(num_recs, user_id):
+#def retrieval_predict(num_recs, user_id):
     
 	# Load Retrieval Model
 	#loaded_retrieval_model = tf.saved_model.load('models/basic_ranking_model.pb')
