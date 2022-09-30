@@ -37,13 +37,13 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1.
 
 st.sidebar.write('Instructions: Click on the generate candidates button to generate a list of candidates using the retrieval model.')
 
-st.sidebar.button('Generate Candidates')
+st.sidebar.button('Generate Candidates', key = "1")
 
 st.sidebar.write('Instructions: Click on the rank candidates button to rank the candidates using the ranking model.')
 
 st.sidebar.button('Rank Candidates')
 
-if st.button('Generate Candidates'):
+if st.button('Generate Candidates', key = "2"):
     
     prediction = retrieval_predict(num_recs, user_id)
     
