@@ -17,14 +17,8 @@ image = Image.open('images/rec_sys.PNG')
 
 st.image(image)
 
-st.sidebar.write('Instructions: The inputs on the sidebar allow you to select the user and the number of recommendations you would like to generate for the user')
+st.sidebar.write('The inputs on the sidebar allow you to select the user and the number of recommendations you would like to generate for the user')
 
-st.sidebar.write('Click on the generate candidates button to generate a list of candidates using the retreval model.')
-
-st.sidebar.write('Click on the rank candidates button to rank the candidates using the ranking model.')
-
-st.sidebar.write('zys')
-         
 user_id = st.sidebar.selectbox(label = 'Select the user ID', options = ('1', '2', '3', '4', '5')) 
 
 num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1.0,
@@ -32,3 +26,6 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1.
                           value = 3.0,
                           step = 1.0)
 
+st.sidebar.write('Click on the generate candidates button to generate a list of candidates using the retreval model.')
+
+st.sidebar.write('Click on the rank candidates button to rank the candidates using the ranking model.')
