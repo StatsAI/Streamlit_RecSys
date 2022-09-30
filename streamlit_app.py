@@ -7,7 +7,7 @@ st.title('Tensorflow Recommenders Library Movie Recommendation System')
 
 st.write('This is a web app to recommend movies to users based upon their watch history using the Tensorflow Recommenders Python library.')
 
-st.write('It uses the following approach, as outlined by: [Tensorflow Recommenders](https://www.tensorflow.org/recommenders/examples/basic_retrieval)"')         
+st.write('It uses the following approach, as outlined by: [Tensorflow Recommenders](https://www.tensorflow.org/recommenders/examples/basic_retrieval)')         
          
 #opening the image
 
