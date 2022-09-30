@@ -43,6 +43,14 @@ def retrieval_predict(num_recs, user_id):
 		
 		results = ['Delicatessen (1991)', 'Tie Me Up! Tie Me Down! (1990)', 'Amateur (1994)', 'Supercop (1992)', 'City of Lost Children, The (1995)']
 		
+	if user_id == "2":
+		
+		results = ['Secrets & Lies (1996)', 'Kolya (1996)', "Ulee's Gold (1997)", "Ulee's Gold (1997)", 'Michael Collins (1996)']
+	
+	if user_id == "3":
+		
+		results = ['Deep Rising (1998)', 'Sphere (1998)','Fallen (1998)','Hard Rain (1998)','Jackie Brown (1997)']
+		
 	return results[:num_recs]
 
 	#return num_recs
