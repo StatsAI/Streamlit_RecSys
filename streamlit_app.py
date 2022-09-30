@@ -31,3 +31,5 @@ st.sidebar.write('Click on the generate candidates button to generate a list of 
 st.sidebar.button('Generate Candidates')
 
 st.sidebar.write('Click on the rank candidates button to rank the candidates using the ranking model.')
+
+st.sidebar.button('Rank Candidates')
