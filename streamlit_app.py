@@ -3,7 +3,7 @@ import numpy as np
 import tensorflow as tf
 from PIL import Image
 
-st.title('Streamlit + Tensorflow Recommenders: Movie Recommendation System')
+st.title('Tensorflow Recommenders: Movie Recommendation System')
 
 st.write('This is a web app to recommend movies using the Tensorflow Recommenders Python library. It uses the following approach:')
 
