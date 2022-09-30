@@ -3,7 +3,7 @@ import numpy as np
 import tensorflow as tf
 from PIL import Image
 
-loaded_retrieval_model = tf.saved_model.load('models/basic_ranking_model.pb')
+loaded_retrieval_model = tf.saved_model.load('saved_model.pb')
 
 ####################################################################################################################################################
 
