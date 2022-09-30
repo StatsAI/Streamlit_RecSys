@@ -15,7 +15,7 @@ st.write('This is a web app to recommend movies using the Tensorflow Recommender
 st.write('Instructions: The inputs on the sidebar allow you to select the user and the number of recommendations you would like to get. After that, click on the generate recommendations button at the bottom to get the results!')
 
 
-fixed_acidity = st.sidebar.slider(label = 'Fixed Acidity', min_value = 4.0,
-                          max_value = 16.0 ,
-                          value = 10.0,
-                          step = 0.1)
+num_recs = st.sidebar.slider(label = 'Number of recommendations', min_value = 1.0,
+                          max_value = 5.0 ,
+                          value = 3.0,
+                          step = 1)
