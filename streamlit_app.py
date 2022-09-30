@@ -3,17 +3,6 @@ import numpy as np
 import tensorflow as tf
 from PIL import Image
 
-def retrieval_predict(num_recs, user_id):
-    
-	# Load Retrieval Model
-	loaded_retrieval_model = tf.saved_model.load('models/basic_ranking_model.pb')
-	
-	scores, titles = loaded_retrieval_model([user_id])
-	
-	return titles[0][:num_recs]
-
-
-
 ####################################################################################################################################################
 
 st.title('Tensorflow Recommenders Library Movie Recommendation System')
@@ -43,6 +32,15 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1.
                           step = 1.0)
 
 ####################################################################################################################################################
+def retrieval_predict(num_recs, user_id):
+    
+	# Load Retrieval Model
+	loaded_retrieval_model = tf.saved_model.load('models/basic_ranking_model.pb')
+	
+	scores, titles = loaded_retrieval_model([user_id])
+	
+	return titles[0][:num_recs]
+
 
 st.sidebar.write('Instructions: Click on the generate candidates button to generate a list of candidates using the retrieval model.')
 
