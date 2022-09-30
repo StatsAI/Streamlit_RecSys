@@ -5,8 +5,10 @@ from PIL import Image
 
 st.title('Tensorflow Recommenders Library Movie Recommendation System')
 
-st.write('This is a web app to recommend movies using the Tensorflow Recommenders Python library. It uses the following approach:')
+st.write('This is a web app to recommend movies to users based upon their watch history using the Tensorflow Recommenders Python library.')
 
+st.write('It uses the following approach:')         
+         
 #opening the image
 
 image = Image.open('images/rec_sys.PNG')
