@@ -28,10 +28,10 @@ st.sidebar.write('Instructions: Use the below controls to select the number of m
 
 user_id = st.sidebar.selectbox(label = 'Select the user ID', options = ('1', '2', '3', '4', '5')) 
 
-num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1.0,
-                          max_value = 5.0 ,
-                          value = 3.0,
-                          step = 1.0)
+num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1,
+                          max_value = 5 ,
+                          value = 3,
+                          step = 1)
 
 
 ####################################################################################################################################################
