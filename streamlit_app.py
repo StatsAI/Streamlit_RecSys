@@ -47,9 +47,11 @@ def retrieval_predict(num_recs, user_id):
 	
 	titles = np.array2string(titles, separator = "'")
 	
+	result = titles
+	
 	#titles = str(titles)
 	
-	result = titles.split("'")
+	#result = titles.split("'")
 	#.astype('U13')
 	
 	#inputstring = 'some strings are present in between "geeks" "for" "geeks" '
