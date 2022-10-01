@@ -51,7 +51,7 @@ def retrieval_predict(num_recs, user_id):
 		title = title.replace("b", "")
 		holder.append(title)		
 	
-	return holder
+	return holder[:num_recs]
 
 def ranking_predict(num_recs, user_id, candidate_predictions):
 	
