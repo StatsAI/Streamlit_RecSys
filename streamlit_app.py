@@ -49,7 +49,7 @@ def retrieval_predict(num_recs, user_id):
 	for title in titles:
 	
 		title = str(title)
-		title = title.replace("b", "")
+		title = title.replace('b', '')
 		#title = title.replace('"', "")
 		holder.append(title)		
 	
