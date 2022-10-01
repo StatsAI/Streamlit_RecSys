@@ -63,7 +63,7 @@ def retrieval_predict(num_recs, user_id):
 	
 	#titles = type(titles)
 	
-	result = holder[0]
+	result = holder[1]
 	
 	#result = titles
 	
