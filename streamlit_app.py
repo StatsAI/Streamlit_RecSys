@@ -41,6 +41,8 @@ def retrieval_predict(num_recs, user_id):
 	
 	scores, titles = loaded_retrieval_model([user_id])
 	
+	
+	
 	#titles = titles.numpy()[0][2]
 	
 	titles = titles.numpy()[0]
@@ -49,7 +51,7 @@ def retrieval_predict(num_recs, user_id):
 	
 	for title in titles:
 	
-		holder.append(titles.numpy()[0][0])		
+		holder.append(title)		
 	
 	#titles = np.array2string(titles)
 	
