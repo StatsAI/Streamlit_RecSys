@@ -61,6 +61,9 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 	
 	test_movie_titles = candidate_predictions 
 	
+	for title in test_movie_titles:
+		title = title.replace('"', "")
+	
 	#test_movie_titles = ['Deep Rising (1998)', 'Sphere (1998)','Fallen (1998)','Hard Rain (1998)','Jackie Brown (1997)']
 	
 	#test_movie_titles = ["'Grand Day Out, A (1992)'", "'Blue in the Face (1995)'", "'Hudsucker Proxy, The (1994)'", "'Crum (1994)'", "'Close Shave, A (1995)'"]
