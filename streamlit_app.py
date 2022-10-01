@@ -53,6 +53,8 @@ def retrieval_predict(num_recs, user_id):
 	
 	#titles = list(titles).split(')
 	
+	titles = tf.convert_to_tensor(titles)
+	
 	titles = type(titles)
 	
 	#titles = titles.split("'")
