@@ -61,6 +61,8 @@ def retrieval_predict(num_recs, user_id):
 	
 	#titles = titles.split("'")
 	
+	titles = type(titles)
+	
 	result = titles
 	
 	#titles = str(titles)
