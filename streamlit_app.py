@@ -19,9 +19,6 @@ st.write('This is a web app to recommend movies to users based upon their watch 
 
 st.write('It uses the following two-model approach approach, as outlined by: [Tensorflow Recommenders](https://www.tensorflow.org/recommenders/examples/basic_retrieval)')         
 
-
-####################################################################################################################################################
-
 #opening the image
 
 image = Image.open('images/rec_sys.PNG')
