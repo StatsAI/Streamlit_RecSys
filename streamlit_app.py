@@ -1,3 +1,5 @@
+
+import pandas as pd
 import streamlit as st
 import numpy as np 
 import tensorflow as tf
@@ -79,6 +81,8 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 		"movie_title": np.array([movie_title])
 		})
 		
+	result = pd.DataFrame.from_dict(result)
+	
 	#holder = {}
 
 	#for title, score in sorted(result.items(), key=lambda x: x[1], reverse=True):	
