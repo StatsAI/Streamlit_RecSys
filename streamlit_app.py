@@ -45,35 +45,35 @@ def retrieval_predict(num_recs, user_id):
 
 	#return loaded_retrieval_model
 
-def ranking_predict(num_recs, user_id, candidate_predictions = None):
+def ranking_predict(num_recs, user_id, candidate_predictions):
 	
-	result = loaded_ranking_model({"user_id": np.array([user_id]), "movie_title": ["Speed (1994)"]}).numpy()
+	#result = loaded_ranking_model({"user_id": np.array([user_id]), "movie_title": ["Speed (1994)"]}).numpy()
 	
-	return result
-	
-	#result = loaded_ranking_model({"user_id": np.array([user_id]), "movie_title": [candidate_predictions]}).numpy()
+	result = loaded_ranking_model({"user_id": np.array([user_id]), "movie_title": [candidate_predictions]}).numpy()
 
-	#return result[:num_recs]
+	return result[:num_recs]
 	
-	#return list(result.items())[:num_recs]
+	#return list(results.items())[:num_recs]
 
 ####################################################################################################################################################
 
 # Initialize session state
 
-if "load_state" not in st.session_state:
-	st.session_state.load_state = False
+#if "load_state" not in st.session_state:
+#	st.session_state.load_state = False
 
+if "candidate_predictions" not in st.session_state:
+	st.session_state.candidate_predictions = None
 
 st.sidebar.write('Instructions: Click on the generate candidates button to generate a list of candidates using the retrieval model.')
 
 #st.sidebar.button('Generate Candidates', key = "1")
 
-if (st.sidebar.button('Generate Candidates') or st.session_state.load_state):
-    
-    candidate_predictions = retrieval_predict(num_recs, user_id)
-    
-    st.write('Your candidate recommendations are: ' + str(candidate_predictions))
+if st.sidebar.button('Generate Candidates'):
+	
+	#candidate_predictions = retrieval_predict(num_recs, user_id)
+	st.session_state.candidate_predictions = retrieval_predict(num_recs, user_id)
+	st.write('Your candidate recommendations are: ' + str(st.session_state.candidate_predictions))
 	
 
 ####################################################################################################################################################	
@@ -81,7 +81,7 @@ if (st.sidebar.button('Generate Candidates') or st.session_state.load_state):
 st.sidebar.write('Instructions: Click on the rank candidates button to rank the candidates using the ranking model.')
 
 if st.sidebar.button('Rank Candidates'):
-    
-    ranking_predictions = ranking_predict(num_recs, user_id)
-    
-    st.write('Your candidate rankings are: ' + str(ranking_predictions))
+	
+	ranking_predictions = ranking_predict(num_recs, user_id, candidate_predictions)
+	st.write('Your candidate recommendations are: ' + str(st.session_state.candidate_predictions))
+	st.write('Your candidate rankings are: ' + str(ranking_predictions))
