@@ -58,9 +58,9 @@ def retrieval_predict(num_recs, user_id):
 def ranking_predict(num_recs, user_id, candidate_predictions):
 	result = {}
 	
-	test_movie_titles = candidate_predictions 
+	#test_movie_titles = candidate_predictions 
 	
-	#test_movie_titles = ['Deep Rising (1998)', 'Sphere (1998)','Fallen (1998)','Hard Rain (1998)','Jackie Brown (1997)']
+	test_movie_titles = ['Deep Rising (1998)', 'Sphere (1998)','Fallen (1998)','Hard Rain (1998)','Jackie Brown (1997)']
 	
 	for movie_title in test_movie_titles:
 		result[movie_title] = loaded_ranking_model({
