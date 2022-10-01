@@ -102,7 +102,7 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 	
 	#return result.values()
 	
-	return results
+	return result
 	
 
 ####################################################################################################################################################
