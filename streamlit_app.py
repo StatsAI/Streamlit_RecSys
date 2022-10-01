@@ -51,9 +51,9 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 	
 	#result = loaded_ranking_model({"user_id": np.array([user_id]), "movie_title": [candidate_predictions]}).numpy()
 
-	return result[:num_recs]
+	#return result[:num_recs]
 	
-	#return list(results.items())[:num_recs]
+	return list(result.items())[:num_recs]
 
 ####################################################################################################################################################
 
