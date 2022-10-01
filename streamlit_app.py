@@ -52,6 +52,7 @@ def retrieval_predict(num_recs, user_id):
 		title = title.replace('b', '')
 		title = title.strip()
 		title = title.replace('"', "")
+		title = title.split('"').join('')
 		holder.append(title)		
 	
 	return holder[:num_recs]
