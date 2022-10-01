@@ -53,9 +53,9 @@ def retrieval_predict(num_recs, user_id):
 	
 	#titles = list(titles).split(')
 	
-	titles = titles.numpy()[0][2]
+	#titles = titles.numpy()[0][2]
 	
-	#titles = titles.numpy()
+	titles = titles.numpy().astype('U13')
 	
 	#titles = titles.split("'")
 	
