@@ -69,16 +69,18 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 		})
 		
 	for title, score in sorted(result.items(), key=lambda x: x[1], reverse=True):	
-		result[movie_title] = [title, score]
+		#result[movie_title] = [title, score]
+		result[movie_title] = [title, score.numpy()[0][0]]
 
 	#result = result.numpy()[0]
 	
 	#return type(list(result.values())[0])
-
-	return list(result.values())[0].numpy()[0][0]
-
 	
-	#return result	
+	#score.numpy()[0][0]
+
+	#return list(result.values())[0].numpy()[0][0]
+
+	return result	
 	
 
 ####################################################################################################################################################
