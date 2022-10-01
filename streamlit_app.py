@@ -43,9 +43,22 @@ def retrieval_predict(num_recs, user_id):
 	
 	titles = titles.numpy()
 	
+	
+	#inputstring = 'some strings are present in between "geeks" "for" "geeks" '
+	result = titles.split()
+	
+	#res=[]
+	
+	#for i in result:
+	#	if(i.startswith('"') and i.endswith('"')):
+	#		i=i.replace('"',"")
+	#		res.append(i)
+		
 	#titles = titles.numpy().astype('U13')
 	
-	return titles[0][:num_recs]
+	return result
+	
+	#return titles[0][:num_recs]
 
 	#return loaded_retrieval_model
 
