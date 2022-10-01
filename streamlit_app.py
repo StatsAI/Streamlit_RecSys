@@ -57,6 +57,13 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 
 ####################################################################################################################################################
 
+# Initialize session state
+
+if "load_state" not in st.session_state:
+	
+	st.session_state.load_state = False
+
+
 st.sidebar.write('Instructions: Click on the generate candidates button to generate a list of candidates using the retrieval model.')
 
 #st.sidebar.button('Generate Candidates', key = "1")
