@@ -73,9 +73,9 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 
 	#result = result.numpy()[0]
 	
-	#return list(result.values())
+	return list(result.values())
 	
-	return result	
+	#return result	
 	
 
 ####################################################################################################################################################
