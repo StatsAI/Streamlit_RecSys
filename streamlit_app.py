@@ -47,9 +47,9 @@ def retrieval_predict(num_recs, user_id):
 
 def ranking_predict(num_recs, user_id, candidate_predictions):
 	
-	#result = loaded_ranking_model({"user_id": np.array([user_id]), "movie_title": ["Speed (1994)"]}).numpy()
+	result = loaded_ranking_model({"user_id": np.array([user_id]), "movie_title": ["Speed (1994)"]}).numpy()
 	
-	result = loaded_ranking_model({"user_id": np.array([user_id]), "movie_title": [candidate_predictions]}).numpy()
+	#result = loaded_ranking_model({"user_id": np.array([user_id]), "movie_title": [candidate_predictions]}).numpy()
 
 	return result[:num_recs]
 	
