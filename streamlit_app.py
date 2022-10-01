@@ -45,7 +45,7 @@ def retrieval_predict(num_recs, user_id):
 	
 	#titles = str(titles.numpy())
 	
-	titles = np.array2string(titles, sep = "'")
+	titles = np.array2string(titles, separator = "'"
 	
 	#titles = str(titles)
 	
