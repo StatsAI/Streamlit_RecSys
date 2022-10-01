@@ -61,9 +61,9 @@ st.sidebar.write('Instructions: Click on the generate candidates button to gener
 
 if st.sidebar.button('Generate Candidates'):
     
-    prediction = retrieval_predict(num_recs, user_id)
+    candidate_predictions = retrieval_predict(num_recs, user_id)
     
-    st.write('Your candidate recommendations are: ' + str(prediction))
+    st.write('Your candidate recommendations are: ' + str(candidate_predictions))
 	
 
 ####################################################################################################################################################	
@@ -72,6 +72,6 @@ st.sidebar.write('Instructions: Click on the rank candidates button to rank the 
 
 if st.sidebar.button('Rank Candidates'):
     
-    prediction = ranking_predict(num_recs, user_id)
+    ranking_predictions = ranking_predict(num_recs, user_id)
     
-    st.write('Your candidate rankings are: ' + str(prediction))
+    st.write('Your candidate rankings are: ' + str(ranking_predictions))
