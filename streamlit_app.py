@@ -83,7 +83,7 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 
 	#return list(result.values())[0].numpy()[0][0]
 
-	return holder	
+	return result	
 	
 
 ####################################################################################################################################################
