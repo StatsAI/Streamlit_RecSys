@@ -80,6 +80,6 @@ st.sidebar.write('Instructions: Click on the rank candidates button to rank the 
 
 if st.sidebar.button('Rank Candidates'):
     
-    ranking_predictions = ranking_predict(num_recs, user_id, candidate_predictions)
+    ranking_predictions = ranking_predict(num_recs, user_id)
     
     st.write('Your candidate rankings are: ' + str(ranking_predictions))
