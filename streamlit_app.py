@@ -1,4 +1,3 @@
-import pandas as pd
 import streamlit as st
 import numpy as np 
 import tensorflow as tf
@@ -68,12 +67,11 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 		"user_id": np.array([user_id]),
 		"movie_title": np.array([movie_title])
 		})
-	
-	
-	#holder = {}
+		
+	holder = {}
 
-	#for title, score in sorted(result.items(), key=lambda x: x[1], reverse=True):	
-	#	holder[movie_title] = [title, score]
+	for title, score in sorted(result.items(), key=lambda x: x[1], reverse=True):	
+		holder[movie_title] = [title, score]
 
 	#result = result.numpy()[0]
 	
