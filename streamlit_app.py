@@ -48,13 +48,11 @@ def retrieval_predict(num_recs, user_id):
 	
 	for title in titles:
 	
-		#title = title[1]
 		title = str(title)
 		title = title.replace('b', '')
 		title = title.strip()
 		title = title.replace('"', "")
 		title = title.replace("'","")
-		#title = title.replace(/^"(.*)"$/, '$1')
 		holder.append(title)		
 	
 	#return holder
