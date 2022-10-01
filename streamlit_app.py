@@ -51,44 +51,7 @@ def retrieval_predict(num_recs, user_id):
 		title = title.replace("b", "")
 		holder.append(title)		
 	
-	#titles = np.array2string(titles)
-	
-	#titles = titles.replace("',", "")
-	
-	#titles = titles.split("b")
-	
-	#titles = titles.replace("b","")	
-	
-	#titles = titles.split(",")
-	
-	#titles = type(titles)
-	
-	result = holder[1]
-	
-	#result = titles
-	
-	#titles = str(titles)
-	
-	#result = titles.split("'")
-	#.astype('U13')
-	
-	#inputstring = 'some strings are present in between "geeks" "for" "geeks" '
-	#result = titles.split()
-	
-	#res=[]
-	
-	#for i in result:
-	#	if(i.startswith('"') and i.endswith('"')):
-	#		i=i.replace('"',"")
-	#		res.append(i)
-		
-	#titles = titles.numpy().astype('U13')
-	
-	return result
-	
-	#return titles[0][:num_recs]
-
-	#return loaded_retrieval_model
+	return holder
 
 def ranking_predict(num_recs, user_id, candidate_predictions):
 	
