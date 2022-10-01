@@ -39,7 +39,7 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1,
 ####################################################################################################################################################
 def retrieval_predict(num_recs, user_id):
 	
-	scores, titles = loaded_retrieval_model([user_id])
+	scores, titles = loaded_retrieval_model([user_id]).decode("utf-8")
 	
 	return titles[0][:num_recs]
 
@@ -64,10 +64,12 @@ def ranking_predict_new(num_recs, user_id, candidate_predictions):
 		"movie_title": np.array([movie_title])
 		})
 		
-	for title, score in sorted(result.items(), key=lambda x: x[1], reverse=True):	
+	for title, score in sorted(results.items(), key=lambda x: x[1], reverse=True):	
 		result[movie_title] = [title, score]
 
 	return result	
+	
+
 
 ####################################################################################################################################################
 
@@ -96,6 +98,6 @@ st.sidebar.write('Instructions: Click on the rank candidates button to rank the 
 
 if st.sidebar.button('Rank Candidates'):
 	
-	ranking_predictions = ranking_predict_new(num_recs, user_id, st.session_state.candidate_predictions)
+	ranking_predictions = ranking_predict(num_recs, user_id, st.session_state.candidate_predictions)
 	st.write('Your candidate recommendations are: ' + str(st.session_state.candidate_predictions))
 	st.write('Your candidate rankings are: ' + str(ranking_predictions))
