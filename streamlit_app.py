@@ -46,30 +46,25 @@ def retrieval_predict(num_recs, user_id):
 	
 	#num_recs = to_int(num_recs)
     
-	if user_id == "1":
+# 	if user_id == "1":
 		
-		results = ['Delicatessen (1991)', 'Tie Me Up! Tie Me Down! (1990)', 'Amateur (1994)', 'Supercop (1992)', 'City of Lost Children, The (1995)']
+# 		results = ['Delicatessen (1991)', 'Tie Me Up! Tie Me Down! (1990)', 'Amateur (1994)', 'Supercop (1992)', 'City of Lost Children, The (1995)']
 		
-	if user_id == "2":
+# 	if user_id == "2":
 		
-		results = ['Secrets & Lies (1996)', 'Kolya (1996)', "Ulee's Gold (1997)", "Ulee's Gold (1997)", 'Michael Collins (1996)']
+# 		results = ['Secrets & Lies (1996)', 'Kolya (1996)', "Ulee's Gold (1997)", "Ulee's Gold (1997)", 'Michael Collins (1996)']
 	
-	if user_id == "3":
+# 	if user_id == "3":
 		
-		results = ['Deep Rising (1998)', 'Sphere (1998)','Fallen (1998)','Hard Rain (1998)','Jackie Brown (1997)']
+# 		results = ['Deep Rising (1998)', 'Sphere (1998)','Fallen (1998)','Hard Rain (1998)','Jackie Brown (1997)']
 		
-	return results[:num_recs]
+# 	return results[:num_recs]
 
 	#return num_recs
 	
-	# Load Retrieval Model
-	#loaded_retrieval_model = tf.saved_model.load('models/basic_ranking_model.pb')
+	scores, titles = loaded_retrieval_model([user_id])
 	
-	#loaded_retrieval_model = load_model('models/basic_ranking_model.pb')
-	
-	#scores, titles = loaded_retrieval_model([user_id])
-	
-	#return titles[0][:num_recs]
+	return titles[0][:num_recs]
 
 	#return loaded_retrieval_model
 
