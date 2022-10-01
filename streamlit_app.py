@@ -83,10 +83,10 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 		
 	#result = pd.DataFrame.from_dict(result)
 	
-	holder = {}
+	#holder = {}
 
-	for title, score in sorted(result.items(), key=lambda x: x[1], reverse=True):	
-		holder[movie_title] = [title, score]
+	#for title, score in sorted(result.items(), key=lambda x: x[1], reverse=True):	
+	#	holder[movie_title] = [title, score]
 
 	#result = result.numpy()[0]
 	
@@ -102,7 +102,7 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 	
 	#return result.values()
 	
-	return holder
+	return results
 	
 
 ####################################################################################################################################################
