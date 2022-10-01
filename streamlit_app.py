@@ -39,7 +39,6 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1,
                           value = 3,
                           step = 1)
 
-
 ####################################################################################################################################################
 def retrieval_predict(num_recs, user_id):
 	
@@ -51,23 +50,11 @@ def retrieval_predict(num_recs, user_id):
 
 def ranking_predict(num_recs, user_id):
 	
-	if user_id == "1":
-		
-		results = {'Delicatessen (1991)':[[3.6232116]], 'Supercop (1992)':[[3.6091228]], 
-			   'Tie Me Up! Tie Me Down! (1990)':[[3.6056335]], 
-			   'City of Lost Children, The (1995)':[[3.5767572]], 'Amateur (1994)':[[3.5685296]]}
+	result = loaded_ranking_model({"user_id": np.array([user_id]), "movie_title": ["Speed (1994)"]}).numpy()
 
-	if user_id == "2":
-		
-		results = {'Michael Collins (1996)': [[3.6752324]], "Ulee's Gold (1997)": [[3.648582]], "Ulee's Gold (1997)": [[3.648582]],
-			   'Secrets & Lies (1996)': [[3.648371]], 'Kolya (1996)': [[3.6237879]]}
+	return result
 	
-	if user_id == "3":
-		
-		results = {'Fallen (1998)': [[3.5747707]], 'Hard Rain (1998)': [[3.5215206]],  'Jackie Brown (1997)': [[3.4988317]], 
-			   'Sphere (1998)': [[3.4699707]], 'Deep Rising (1998)': [[3.44528]]}
-		
-	return list(results.items())[:num_recs]
+	#return list(results.items())[:num_recs]
 
 ####################################################################################################################################################
 
