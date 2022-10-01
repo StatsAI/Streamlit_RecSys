@@ -63,7 +63,7 @@ def retrieval_predict(num_recs, user_id):
 
 	
 	
-def ranking_predict(num_recs, user_id, candidate_predictions):
+def ranking_predict(user_id, candidate_predictions):
 	result = {}
 	
 	test_movie_titles = candidate_predictions 
@@ -132,7 +132,7 @@ st.sidebar.write('Instructions: Click on the rank candidates button to rank the 
 
 if st.sidebar.button('Rank Candidates'):
 	
-	ranking_predictions = ranking_predict(num_recs, user_id, st.session_state.candidate_predictions)
+	ranking_predictions = ranking_predict(user_id, st.session_state.candidate_predictions)
 	
 	st.write('Your candidate recommendations are: ' + str(st.session_state.candidate_predictions))
 	st.write('Your candidate rankings are: ' + str(ranking_predictions))
