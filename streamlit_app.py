@@ -41,7 +41,7 @@ def retrieval_predict(num_recs, user_id):
 	
 	scores, titles = loaded_retrieval_model([user_id])
 	
-	titles = titles.decode("utf-8")
+	titles = titles.numpy().decode("utf-8")
 	
 	return titles[0][:num_recs]
 
