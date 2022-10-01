@@ -64,7 +64,7 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 	
 	for movie_title in test_movie_titles:
 		result[movie_title] = loaded_ranking_model({
-		"user_id": np.array(["3"]),
+		"user_id": np.array([user_id]),
 		"movie_title": np.array([movie_title])
 		})
 		
