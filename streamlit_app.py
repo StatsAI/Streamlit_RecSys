@@ -41,7 +41,9 @@ def retrieval_predict(num_recs, user_id):
 	
 	scores, titles = loaded_retrieval_model([user_id])
 	
-	titles = titles.numpy().astype('U13')
+	titles = titles.numpy()
+	
+	#titles = titles.numpy().astype('U13')
 	
 	return titles[0][:num_recs]
 
