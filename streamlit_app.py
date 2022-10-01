@@ -41,7 +41,7 @@ def retrieval_predict(num_recs, user_id):
 	
 	scores, titles = loaded_retrieval_model([user_id])
 	
-	return list(titles[0])[:num_recs]
+	return titles[0][:num_recs]
 
 	#return loaded_retrieval_model
 
@@ -74,6 +74,6 @@ st.sidebar.write('Instructions: Click on the rank candidates button to rank the 
 
 if st.sidebar.button('Rank Candidates'):
     
-    ranking_predictions = ranking_predict(num_recs, user_id)
+    ranking_predictions = ranking_predict(num_recs, user_id, candidate_predictions)
     
     st.write('Your candidate rankings are: ' + str(ranking_predictions))
