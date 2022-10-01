@@ -6,7 +6,7 @@ from PIL import Image
 #loaded_retrieval_model = tf.saved_model.load('models/basic_retrieval_model.pb')
 #loaded_ranking_model = tf.saved_model.load('models/basic_ranking_model.pb')
 
-# this does not work
+# this works
 loaded_retrieval_model = tf.saved_model.load('models/index_model')
 
 # this works
