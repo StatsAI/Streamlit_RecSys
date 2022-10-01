@@ -50,7 +50,7 @@ def retrieval_predict(num_recs, user_id):
 	
 		title = str(title)
 		title = title.replace("b", "")
-		title = title.replace('"', "")
+		#title = title.replace('"', "")
 		holder.append(title)		
 	
 	return holder[:num_recs]
@@ -62,7 +62,7 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 	test_movie_titles = candidate_predictions 
 	
 	for title in test_movie_titles:
-		title = title.replace('"', "")
+		title = title.replace("'", "")
 	
 	#test_movie_titles = ['Deep Rising (1998)', 'Sphere (1998)','Fallen (1998)','Hard Rain (1998)','Jackie Brown (1997)']
 	
