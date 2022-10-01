@@ -49,7 +49,7 @@ def ranking_predict(num_recs, user_id):
 	
 	result = loaded_ranking_model({"user_id": np.array([user_id]), "movie_title": ["Speed (1994)"]}).numpy()
 
-	return result
+	return result[:num_recs]
 	
 	#return list(results.items())[:num_recs]
 
