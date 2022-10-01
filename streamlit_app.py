@@ -53,9 +53,23 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 
 	return result
 	
-	#return result[:num_recs]
+def ranking_predict_new(num_recs, user_id, candidate_predictions):
+	result = {}
 	
-	#return list(results.items())[:num_recs]
+	test_movie_titles = ['Deep Rising (1998)', 'Sphere (1998)','Fallen (1998)','Hard Rain (1998)','Jackie Brown (1997)']
+	
+	for movie_title in test_movie_titles:
+		result[movie_title] = loaded_ranking_model({
+		"user_id": np.array(["3"]),
+		"movie_title": np.array([movie_title])
+		})
+		
+	#for title, score in sorted(test_ratings.items(), key=lambda x: x[1], reverse=True):
+	#	print(f"{title}: {score}")	
+
+
+	return result	
+	
 
 ####################################################################################################################################################
 
@@ -84,6 +98,6 @@ st.sidebar.write('Instructions: Click on the rank candidates button to rank the 
 
 if st.sidebar.button('Rank Candidates'):
 	
-	ranking_predictions = ranking_predict(num_recs, user_id, st.session_state.candidate_predictions)
+	ranking_predictions = ranking_predict_new(num_recs, user_id, st.session_state.candidate_predictions)
 	st.write('Your candidate recommendations are: ' + str(st.session_state.candidate_predictions))
 	st.write('Your candidate rankings are: ' + str(ranking_predictions))
