@@ -46,17 +46,19 @@ def retrieval_predict(num_recs, user_id):
 	
 	holder = []
 	
-	for title in titles:
+# 	for title in titles:
 	
-		title = title[1]
-		title = str(title)
-		title = title.replace('b', '')
-		title = title.strip()
-		title = title.replace('"', "")
-		#title = title.split('"').join('')
-		holder.append(title)		
+# 		#title = title[1]
+# 		title = str(title)
+# 		title = title.replace('b', '')
+# 		title = title.strip()
+# 		title = title.replace('"', "")
+# 		#title = title.split('"').join('')
+# 		holder.append(title)		
 	
-	return holder[:num_recs]
+	return titles
+	
+	#return holder[:num_recs]
 
 	
 def ranking_predict(num_recs, user_id, candidate_predictions):
