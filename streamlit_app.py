@@ -69,7 +69,7 @@ st.sidebar.write('Instructions: Click on the generate candidates button to gener
 
 #st.sidebar.button('Generate Candidates', key = "1")
 
-if st.sidebar.button('Generate Candidates') or st.session_state.load_state:
+if (st.sidebar.button('Generate Candidates') or st.session_state.load_state):
     
     candidate_predictions = retrieval_predict(num_recs, user_id)
     
