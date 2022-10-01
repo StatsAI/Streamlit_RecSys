@@ -61,9 +61,9 @@ def retrieval_predict(num_recs, user_id):
 	
 	titles = titles.replace("',", "")
 	
-	titles = titles.split("b")
+	#titles = titles.split("b")
 	
-	#titles = titles.replace("b","")	
+	titles = titles.replace("b","")	
 	
 	#titles = titles.split("'")
 	
