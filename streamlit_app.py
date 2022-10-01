@@ -57,7 +57,7 @@ def retrieval_predict(num_recs, user_id):
 		holder.append(title)		
 	
 	#return holder
-	return holder[0]
+	return holder[:2]
 	#return holder[:num_recs]
 
 	
