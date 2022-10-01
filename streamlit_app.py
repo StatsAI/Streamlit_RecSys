@@ -40,17 +40,14 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1,
 def retrieval_predict(num_recs, user_id):
 	
 	scores, titles = loaded_retrieval_model([user_id])
-	
-	
-	
-	#titles = titles.numpy()[0][2]
-	
+		
 	titles = titles.numpy()[0]
 	
 	holder = []
 	
 	for title in titles:
 	
+		title = title.replace("b", "")
 		holder.append(title)		
 	
 	#titles = np.array2string(titles)
