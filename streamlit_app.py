@@ -6,8 +6,9 @@ from PIL import Image
 #loaded_retrieval_model = tf.saved_model.load('models/basic_retrieval_model.pb')
 #loaded_ranking_model = tf.saved_model.load('models/basic_ranking_model.pb')
 
-# this works
+# load tensorflow models for retrieval and ranking
 loaded_retrieval_model = tf.saved_model.load('models/index_model')
+loaded_ranking_model = tf.saved_model.load('models/ranking_model')
 
 # this works
 #model1 = tf.keras.models.load_model('models/my_keras_model1.h5')
@@ -43,24 +44,6 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1,
 
 ####################################################################################################################################################
 def retrieval_predict(num_recs, user_id):
-	
-	#num_recs = to_int(num_recs)
-    
-# 	if user_id == "1":
-		
-# 		results = ['Delicatessen (1991)', 'Tie Me Up! Tie Me Down! (1990)', 'Amateur (1994)', 'Supercop (1992)', 'City of Lost Children, The (1995)']
-		
-# 	if user_id == "2":
-		
-# 		results = ['Secrets & Lies (1996)', 'Kolya (1996)', "Ulee's Gold (1997)", "Ulee's Gold (1997)", 'Michael Collins (1996)']
-	
-# 	if user_id == "3":
-		
-# 		results = ['Deep Rising (1998)', 'Sphere (1998)','Fallen (1998)','Hard Rain (1998)','Jackie Brown (1997)']
-		
-# 	return results[:num_recs]
-
-	#return num_recs
 	
 	scores, titles = loaded_retrieval_model([user_id])
 	
