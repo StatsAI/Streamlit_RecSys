@@ -39,7 +39,9 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1,
 ####################################################################################################################################################
 def retrieval_predict(num_recs, user_id):
 	
-	scores, titles = loaded_retrieval_model([user_id]).decode("utf-8")
+	scores, titles = loaded_retrieval_model([user_id])
+	
+	titles = titles.decode("utf-8")
 	
 	return titles[0][:num_recs]
 
