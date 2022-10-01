@@ -75,7 +75,7 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 	
 	#return type(list(result.values())[0])
 
-	return list(result.values())[0]
+	return list(result.values())[0].numpy()
 
 	
 	#return result	
