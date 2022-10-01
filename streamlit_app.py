@@ -37,6 +37,7 @@ num_recs = st.sidebar.slider(label = 'Number of Recommendations', min_value = 1,
                           step = 1)
 
 ####################################################################################################################################################
+
 def retrieval_predict(num_recs, user_id):
 	
 	scores, titles = loaded_retrieval_model([user_id])
@@ -53,6 +54,7 @@ def retrieval_predict(num_recs, user_id):
 	
 	return holder[:num_recs]
 
+
 def ranking_predict(num_recs, user_id, candidate_predictions):
 	
 	result = loaded_ranking_model({"user_id": np.array([user_id]), "movie_title": ["Speed (1994)"]}).numpy()
@@ -60,6 +62,7 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 	#result = loaded_ranking_model({"user_id": np.array([user_id]), "movie_title": [candidate_predictions]}).numpy()
 
 	return result
+	
 	
 def ranking_predict_new(num_recs, user_id, candidate_predictions):
 	result = {}
@@ -79,7 +82,6 @@ def ranking_predict_new(num_recs, user_id, candidate_predictions):
 
 	return result	
 	
-
 
 ####################################################################################################################################################
 
