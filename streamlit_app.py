@@ -56,10 +56,11 @@ def retrieval_predict(num_recs, user_id):
 		title = title.replace(/^"(.*)"$/, '$1')
 		holder.append(title)		
 	
-	return holder
-	
+	#return holder
+	return titles[0]
 	#return holder[:num_recs]
 
+	
 	
 def ranking_predict(num_recs, user_id, candidate_predictions):
 	result = {}
