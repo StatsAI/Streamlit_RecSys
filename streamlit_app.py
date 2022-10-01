@@ -43,6 +43,9 @@ def retrieval_predict(num_recs, user_id):
 	
 	titles = str(titles.numpy())
 	
+	#titles = str(titles.numpy())
+	
+	result = titles
 	
 	#inputstring = 'some strings are present in between "geeks" "for" "geeks" '
 	#result = titles.split()
