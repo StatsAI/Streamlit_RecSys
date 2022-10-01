@@ -41,7 +41,7 @@ def retrieval_predict(num_recs, user_id):
 	
 	scores, titles = loaded_retrieval_model([user_id])
 	
-	titles = titles.numpy()
+	titles = list(titles.numpy())
 	
 	
 	#inputstring = 'some strings are present in between "geeks" "for" "geeks" '
