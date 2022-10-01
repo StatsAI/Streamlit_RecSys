@@ -69,7 +69,7 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 		"movie_title": np.array([movie_title])
 		})
 	
-	result = result.keys()
+	result = result.values()
 	
 	#holder = {}
 
