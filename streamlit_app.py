@@ -69,6 +69,7 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 		"movie_title": np.array([movie_title])
 		})
 	
+	
 	#holder = {}
 
 	#for title, score in sorted(result.items(), key=lambda x: x[1], reverse=True):	
@@ -84,7 +85,7 @@ def ranking_predict(num_recs, user_id, candidate_predictions):
 
 	#return list(result.values())[0].numpy()[0][0]
 
-	return result.values()	
+	return result	
 	
 
 ####################################################################################################################################################
