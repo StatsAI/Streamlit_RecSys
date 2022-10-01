@@ -59,7 +59,7 @@ def retrieval_predict(num_recs, user_id):
 	
 	titles = np.array2string(titles)
 	
-	titles = titles.decode("utf-8")
+	titles = titles.split(separator = 'b')
 	
 	#titles = titles.split("'")
 	
