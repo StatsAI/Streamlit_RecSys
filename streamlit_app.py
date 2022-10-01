@@ -41,25 +41,19 @@ def retrieval_predict(num_recs, user_id):
 	
 	scores, titles = loaded_retrieval_model([user_id])
 	
-	#titles = str(titles.numpy())
-	
-	#titles = str(titles.numpy())
-	
-	#titles = titles.numpy()
-	
-	#.astype('U13')
-	
-	#titles = np.array2string(titles, separator = "'")
-	
-	#titles = list(titles).split(')
-	
 	#titles = titles.numpy()[0][2]
 	
 	titles = titles.numpy()[0]
 	
-	titles = np.array2string(titles)
+	holder = []
 	
-	titles = titles.replace("',", "")
+	for title in titles:
+	
+		holder.append(titles.numpy()[0][0])		
+	
+	#titles = np.array2string(titles)
+	
+	#titles = titles.replace("',", "")
 	
 	#titles = titles.split("b")
 	
@@ -69,7 +63,9 @@ def retrieval_predict(num_recs, user_id):
 	
 	#titles = type(titles)
 	
-	result = titles
+	result = holder
+	
+	#result = titles
 	
 	#titles = str(titles)
 	
